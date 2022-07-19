@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
                 playerAnim.SetBool("isGrounded", false);
                 return;
             }
-            if (GameManager.instance.clock)
+            if (GameManager.instance.clock && !ClockManager.C.isPressKeyClock)
             {
                 GameObject.Find("ClockManager").SendMessage("clockReset");
             }
